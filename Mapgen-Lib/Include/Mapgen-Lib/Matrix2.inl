@@ -167,6 +167,7 @@ constexpr Matrix2<T>& Matrix2<T>::operator=(Matrix2<T>&& other)
     
     other.m_Shape = MatrixShape2(0, 0);
     other.m_Data = nullptr;
+    return *this;
 }
 
 template<typename T>
