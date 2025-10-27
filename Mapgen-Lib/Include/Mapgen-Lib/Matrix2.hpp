@@ -48,9 +48,6 @@ public:
 
     /**
      * Get an item of the matrix with its coordinates.
-     * 
-     * If the coordinates are invalid, then it will return an instance of ``T`` created with its
-     * default constructor.
      */
     [[nodiscard]] constexpr T& operator() (std::size_t, std::size_t);
 

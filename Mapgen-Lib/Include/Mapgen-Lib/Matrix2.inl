@@ -134,8 +134,6 @@ constexpr bool Matrix2<T>::Resize(const MatrixShape2& shape)
 template<typename T>
 constexpr T& Matrix2<T>::operator() (std::size_t i, std::size_t j)
 {
-    if (i > m_Shape.x || j > m_Shape.y) return T();
-
     return m_Data[j][i];
 }
 
