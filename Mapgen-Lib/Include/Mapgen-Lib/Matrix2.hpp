@@ -52,6 +52,7 @@ public:
     [[nodiscard]] constexpr T& operator() (std::size_t, std::size_t);
 
     constexpr Matrix2<T>& operator=(const Matrix2<T>&);
+    constexpr Matrix2<T>& operator=(Matrix2<T>&&);
     constexpr Matrix2<T>& operator+=(const Matrix2<T>&);
     constexpr Matrix2<T>& operator-=(const Matrix2<T>&);
     constexpr Matrix2<T>& operator*=(const Matrix2<T>&);

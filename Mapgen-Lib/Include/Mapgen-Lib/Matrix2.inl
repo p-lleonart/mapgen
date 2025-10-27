@@ -157,6 +157,19 @@ constexpr Matrix2<T>& Matrix2<T>::operator=(const Matrix2<T>& other)
 }
 
 template<typename T>
+constexpr Matrix2<T>& Matrix2<T>::operator=(Matrix2<T>&& other)
+{
+    if (this == &other) return *this;
+
+    Empty();
+    m_Shape = other.m_Shape;
+    m_Data = other.m_Data;
+    
+    other.m_Shape = MatrixShape2(0, 0);
+    other.m_Data = nullptr;
+}
+
+template<typename T>
 constexpr Matrix2<T>& Matrix2<T>::operator+=(const Matrix2<T>& other)
 {
     if (m_Shape.x != other.m_Shape.x || m_Shape.y != other.m_Shape.y)
